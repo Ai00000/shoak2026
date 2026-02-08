@@ -1,0 +1,736 @@
+<!DOCTYPE html><html lang="zh-Ch" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>FinalFrameWork使用手册 | 指尖小屋</title><meta name="keywords" content="FinalFramerWork"><meta name="author" content="fasty"><meta name="copyright" content="fasty"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="FinalFrameWork使用手册"><meta name="application-name" content="FinalFrameWork使用手册"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="FinalFrameWork使用手册"><meta property="og:url" content="https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/index.html"><meta property="og:site_name" content="指尖小屋"><meta property="og:description" content="框架使用手册"><meta property="og:locale" content="zh-Ch"><meta property="og:image" content="http://pic.fasty97.top/fasty26/202602082038998.png"><meta property="article:author" content="fasty"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://pic.fasty97.top/fasty26/202602082038998.png"><meta name="description" content="框架使用手册"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css#fontawesome_animation"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: fasty","link":"链接: ","source":"来源: 指尖小屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: true,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '指尖小屋',
+  title: 'FinalFrameWork使用手册',
+  postAI: '',
+  pageFillDescription: '1.快速安装, 1.1 通过 Unity PackageManager（推荐）, 1.2 直接前往 gitee 下载 （对于需要修改源码）, 2.项目依赖, 3.启动框架, 3.1 AA设置, 3.2 启动器, 3.3 扩展启动流程, FSM管理启动流程, 3.4 版本号管理和UI创建器, 4.IOC容器, 5.基础系统, 5.1 资源加载, 5.2 场景加载, 5.3 事件总线, 5.4 音效管理, 5.5 UI管理, 5.5.1UIPanel的创建和使用, 5.5.2UIView, 5.5.3UIPopWindow的创建和使用, 5.5.4确认框Confim, 5.5.5提示Tip, 6.扩展功能, 6.1 Csv读取, 6.2 CSV转SO, 6.3 FSM状态机, 6.4 对象池, 6.5 单例, 6.6 So背包, 7.常用工具, 7.1 全局黑板, 7.2 常用颜色, 7.3 其他工具是一款自用的简单强大现代化的框架关联文章施工中站内地址模板额外工具集以下简称为快速安装通过推荐直接前往下载对于需要修改源码到本地通过安装到项目中通过此方法安装时可以对框架源码进行修改如果您对于框架有好想法欢迎共享代码项目依赖动画插件弹窗组件依赖响应式编程更好的付费插件框架不提供请自行导入启动框架设置默认提供资源加载和资源加载推荐使用在导入框架时就已经自动安装了依赖项打开点击创建一个默认的包设置启动器创建一个启动器用于管理游戏启动流程首先初始化创建一个场景作为启动场景这个场景中只为了启动游戏流程不放任何资源创建一个脚本继承自将这个脚本挂载在游戏对象上在空场景中创建一个空游戏对象点击启动看到如上日志输出时说明已完成框架启动扩展启动流程对于自定义的启动流程最方便的方式是直接在中书写其余的自定义的启动流程管理启动流程中提供了有限状态机工具使用此工具我们可以将游戏按流程进行划分例如下图在不同的流程中我们可以对资源游戏系统等进行控制具体使用很自由在项目中提供了一个示例可参考实现以启动游戏进行流程管理示例菜单状态菜单状态游戏状态菜单状态游戏状态版本号管理和创建器快捷键按下可以打开管理器如下图点击创建项目资源结构文件夹点击选择路径选择点击刷新可以自动扫描文件将其加入分组管理版本号用于区分引用版本默认显示在右下角模板可以通过这个创建默认面板以结尾弹窗以结尾容器框架使用类似容器的概念管理带状态的数据对象可进入查看源码带状态的游戏数据实体对象带状态的游戏在任何地方均可使用来注册一个系统获取系统注册一个数据模型获取数据模型基础系统资源加载继承自在启动器中使用接口实现场景加载继承自在启动器中使用接口实现自由选择加载完成加载进度事件总线支持事件注册派发注销状态管理等同时为了维护事件系统的无序性支持根据优先级进行事件执行注册监听游戏启动事件高优先级游戏启动事件默认优先级发送事件移除监听查看事件中心状态音效管理播放音效静音设置音量获取音量管理系统使用栈对面板进行管理将划分为五层的创建和使用可以使用创建创建后的位置在下创建后在目录下下创建一个脚本挂载在预制体上点击的刷新按钮会自动将其加入管理初始化完成显示退出更新显示更新关闭方法方法是的最小单位包含一个组件一个下可以有多个用法基本同继承自在初始化时会自动初始化在事件时也会同步执行的创建和使用所有在游戏中需要以弹窗展示的内容都可以使用此系统进行处理创建同直接在中创建即可继承自初始化显示退出显示关闭关闭所有确认框创建一个名位的弹窗该弹窗至少包含如下元素挂载脚本并将设置上注意对于确认框来说我们希望在弹出时遮挡其下的操作所以我们设置父布局占满设置完成后如果你不希望遮挡就不需要完成后第一次需要点击的刷新将其加入到包中确定取消提示创建预制体添加脚本并给变量赋值将其加入包中载入预制体初始化显示提示扩展功能读取创建如下实体类为方便管理可继承自默认提供了字段武器名称武器等级武器攻击力武器防御力武器等级武器攻击力武器防御力武器名称武器等级武器攻击力武器防御力小刀双节棍银月斧注意文件需要以分隔以为编码读取使用即可将直接解析为对象集提供多种方法可尝试转框架提供了将转换为的功能可方便的将数据转换到为什么要将转换到比如中包含一些二进制资源图片地址预制体地址音效地址等在中无法预览容易配错特性对比文件数据形态外部文本存储为资源文件运行时性能需实时解析效率较低直接引用无需解析性能高内存占用字符串形式加载解析后产生额外垃圾回收序列化对象内存效率更优类型安全所有字段初始为字符串需手动转换类型易出错强类型字段在中清晰可见不易出错当然选择什么样的存储形式完全取决于您仅提供支持要将转换为首先需要将文件从文件夹移出选中文件右键状态机创建状态类进入退出进入退出设置并启动状态机提供一个上下文作为状态机的公用数据黑板可以是任意类型这里使用都是全局黑板创建状态机注册状态注册转换任意状态只要条件满足都会转换到目标状态注册转换按下且当前状态是才能转换到注册刷新改变状态转换是可选的如果不使用转换可以使用强制转换状态如果注册了转换会自动转换对象池框架提供种对象池通用对象对象池和游戏对象池单例默认只提供单例类型用于单例对于其他的单例框架建议使用容器进行管理实现全局调用背包背包是对的数据存储集资源可直接继承自使用提供方法背包的设计用意是方便存储和读取数据将相同的资源数据用存储调用例如背包和背包道具成就数据等常用工具全局黑板默认提供了一个全局游戏黑板方便进行全局的数据暂存取用获得全局游戏黑板同时也可以创建自己的数据黑板继承自即可常用颜色访问静态类进行使用其他工具自定义字典在属性面板序列化一些常用工具文字着色跳过任务队列日志扩展',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-02-08 20:40:30',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="http://pic.fasty97.top/fasty26/ico_A.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">指尖小屋</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/project/"><i class="far fa-code faa-tada"></i><span> 项目</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/timeLine/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 博客里程</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/2D/" style="font-size: 1.05rem;">2D<sup>1</sup></a><a href="/tags/Async/" style="font-size: 1.05rem;">Async<sup>1</sup></a><a href="/tags/Cinemachine/" style="font-size: 1.05rem;">Cinemachine<sup>1</sup></a><a href="/tags/FSM/" style="font-size: 1.05rem;">FSM<sup>1</sup></a><a href="/tags/FinalFramerWork/" style="font-size: 1.05rem;">FinalFramerWork<sup>3</sup></a><a href="/tags/Lua/" style="font-size: 1.05rem;">Lua<sup>9</sup></a><a href="/tags/MMD/" style="font-size: 1.05rem;">MMD<sup>1</sup></a><a href="/tags/PMX/" style="font-size: 1.05rem;">PMX<sup>1</sup></a><a href="/tags/Shader/" style="font-size: 1.05rem;">Shader<sup>10</sup></a><a href="/tags/Spine/" style="font-size: 1.05rem;">Spine<sup>1</sup></a><a href="/tags/TimeLine/" style="font-size: 1.05rem;">TimeLine<sup>1</sup></a><a href="/tags/Unity-Tool/" style="font-size: 1.05rem;">Unity Tool<sup>4</sup></a><a href="/tags/VR-AR-MR/" style="font-size: 1.05rem;">VR/AR/MR<sup>1</sup></a><a href="/tags/XML/" style="font-size: 1.05rem;">XML<sup>1</sup></a><a href="/tags/shaderGraph/" style="font-size: 1.05rem;">shaderGraph<sup>1</sup></a><a href="/tags/ui/" style="font-size: 1.05rem;">ui<sup>3</sup></a><a href="/tags/unity/" style="font-size: 1.05rem;">unity<sup>12</sup></a><a href="/tags/%E5%89%A7%E6%83%85%E7%BC%96%E6%8E%92/" style="font-size: 1.05rem;">剧情编排<sup>1</sup></a><a href="/tags/%E5%8D%8F%E7%A8%8B/" style="font-size: 1.05rem;">协程<sup>2</sup></a><a href="/tags/%E5%8F%AF%E7%BC%96%E7%A8%8B%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF%EF%BC%88SRP%EF%BC%89/" style="font-size: 1.05rem;">可编程渲染管线（SRP）<sup>1</sup></a><a href="/tags/%E5%90%8E%E5%A4%84%E7%90%86/" style="font-size: 1.05rem;">后处理<sup>1</sup></a><a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">响应式编程<sup>1</sup></a><a href="/tags/%E5%A4%9A%E4%BA%BA/" style="font-size: 1.05rem;">多人<sup>1</sup></a><a href="/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/" style="font-size: 1.05rem;">好物推荐<sup>4</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 1.05rem;">年终总结<sup>5</sup></a><a href="/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 1.05rem;">异步<sup>1</sup></a><a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 1.05rem;">总结<sup>1</sup></a><a href="/tags/%E6%89%8B%E6%9F%84/" style="font-size: 1.05rem;">手柄<sup>1</sup></a><a href="/tags/%E6%96%B0%E6%8A%80%E6%9C%AF%E4%BD%93%E9%AA%8C/" style="font-size: 1.05rem;">新技术体验<sup>1</sup></a><a href="/tags/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" style="font-size: 1.05rem;">有限状态机<sup>2</sup></a><a href="/tags/%E6%A8%A1%E5%9E%8B/" style="font-size: 1.05rem;">模型<sup>1</sup></a><a href="/tags/%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF/" style="font-size: 1.05rem;">渲染管线<sup>1</sup></a><a href="/tags/%E7%8A%B6%E6%80%81%E6%9C%BA/" style="font-size: 1.05rem;">状态机<sup>2</sup></a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.05rem;">生活<sup>7</sup></a><a href="/tags/%E7%9B%AE%E6%A0%87/" style="font-size: 1.05rem;">目标<sup>1</sup></a><a href="/tags/%E8%A1%8C%E4%B8%BA%E6%A0%91/" style="font-size: 1.05rem;">行为树<sup>2</sup></a><a href="/tags/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" style="font-size: 1.05rem;">观察者模式<sup>1</sup></a><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">读书笔记<sup>14</sup></a><a href="/tags/%E8%BE%93%E5%85%A5%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">输入系统<sup>2</sup></a><a href="/tags/%E9%93%BE%E5%BC%8F%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">链式编程<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">February 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">January 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">December 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">April 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">July 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">February 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url">游戏开发</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/" itemprop="url">框架设计</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/FinalFramerWork/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>FinalFramerWork</span></a></span></div></div><h1 class="post-title" itemprop="name headline">FinalFrameWork使用手册</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-02-02T12:23:31.694Z" title="发表于 2026-02-02 20:23:31">2026-02-02</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-02-08T12:40:30.628Z" title="更新于 2026-02-08 20:40:30">2026-02-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">3.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="FinalFrameWork使用手册"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为昆明"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>昆明</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="http://pic.fasty97.top/fasty26/202602082038998.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"><header><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" itemprop="url">游戏开发</a><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/" itemprop="url">框架设计</a><a href="/tags/FinalFramerWork/" tabindex="-1" itemprop="url">FinalFramerWork</a><h1 id="CrawlerTitle" itemprop="name headline">FinalFrameWork使用手册</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">fasty</span><time itemprop="dateCreated datePublished" datetime="2026-02-02T12:23:31.694Z" title="发表于 2026-02-02 20:23:31">2026-02-02</time><time itemprop="dateCreated datePublished" datetime="2026-02-08T12:40:30.628Z" title="更新于 2026-02-08 20:40:30">2026-02-08</time></header>  <p class='p center logo large'>FinalFrameWork</p>
+  <p class='p center small'>是一款自用的、简单、强大、现代化的unity框架</p>
+<p><strong>关联文章:</strong></p>
+<p>🚧施工中: <div class='anzhiyu-tag-link'><a class="tag-Link"  href="/2026/02/03/FinalFrameWork%E6%A8%A1%E6%9D%BF/">
+    <div class="tag-link-tips">站内地址</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left" data-icon="/favicon.ico">
+          <img class="tag-link-favicon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/favicon.ico" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" style="" alt="favicon"/>
+          <i class="anzhiyufont anzhiyu-icon-link" style="display:none"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">FinalFrameWork模板</div>
+            <div class="tag-link-sitename">额外工具集</div>
+        </div>
+        <i class="anzhiyufont anzhiyu-icon-angle-right"></i>
+    </div>
+    </a></div></p>
+<div class="tip info"><p>FinalFrameWork以下简称为<code>FF</code>。</p>
+</div>
+<h2 id="1-快速安装">1.快速安装</h2>
+<h3 id="1-1-通过-Unity-PackageManager（推荐）">1.1 通过 Unity PackageManager（推荐）</h3>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//gitee.com/CodeInYNOU/final-core.git#master</span></span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602020930303.png" alt="image-20260202093040047"></p>
+<h3 id="1-2-直接前往-gitee-下载-（对于需要修改源码）">1.2 直接前往 gitee 下载 （对于需要修改源码）</h3>
+<p>git clone  <a target="_blank" rel="noopener" href="https://gitee.com/CodeInYNOU/final-core.git">https://gitee.com/CodeInYNOU/final-core.git</a>  到本地</p>
+<p>通过Unity PackageManager Add Package from Disk 安装到项目中，通过此方法安装时可以对框架源码进行修改。</p>
+<p>如果您对于框架有好想法 😽 ，欢迎<code>Pull Request</code>共享代码！</p>
+<h2 id="2-项目依赖">2.项目依赖</h2>
+<ul>
+<li>DoTween 动画插件 （弹窗组件依赖）</li>
+<li>UniRX 响应式编程</li>
+<li>UniTask 更好的Async</li>
+<li>Odin（付费插件，<code>框架不提供，请自行导入</code>）</li>
+</ul>
+<h2 id="3-启动框架">3.启动框架</h2>
+<h3 id="3-1-AA设置">3.1 AA设置</h3>
+<p>FF 默认提供Resource资源加载和Addressable 资源加载，推荐使用Addressable 。</p>
+<p>在导入框架时就已经自动安装了Addressable依赖项。  打开Addressles Groups  点击创建一个默认的aa包设置。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021009701.png" alt="image-20260202100949038"></p>
+<h3 id="3-2-启动器">3.2 启动器</h3>
+<p>创建一个启动器用于管理游戏启动流程：</p>
+<ol>
+<li>首先初始化TextMeshPro</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021020480.png" alt="image-20260202102015172"></p>
+<ol start="2">
+<li>
+<p>创建一个场景Start 作为启动场景，这个场景中只为了启动游戏流程，不放任何资源。</p>
+</li>
+<li>
+<p>创建一个GameBoot 脚本继承自GameStartAbs</p>
+</li>
+</ol>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> FFW.BaseSystems.ResKit;</span><br><span class="line"><span class="keyword">using</span> FFW.BaseSystems.SceneKit;</span><br><span class="line"><span class="keyword">using</span> FFW.Core;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GameBoot</span> : <span class="title">GameStartAbs</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> IResLoader ResLoader =&gt; resLoader ?? <span class="keyword">new</span> AddressResLoader();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">override</span> ISceneLoader SceneLoader =&gt; sceneLoader ?? <span class="keyword">new</span> SceneLoaderDefault();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>将这个脚本挂载在Core游戏对象上（在空场景中创建一个空游戏对象），点击启动！</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021022664.png" alt="image-20260202102253216"></p>
+<p>看到如上日志输出时说明，已完成框架启动！</p>
+<hr>
+<h3 id="3-3-扩展启动流程">3.3 扩展启动流程</h3>
+<p>对于自定义的启动流程最方便的方式是直接在Start中书写：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GameBoot</span> : <span class="title">GameStartAbs</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">override</span> IResLoader ResLoader =&gt; resLoader ?? <span class="keyword">new</span> AddressResLoader();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">override</span> ISceneLoader SceneLoader =&gt; sceneLoader ?? <span class="keyword">new</span> SceneLoaderDefault();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//其余的 自定义的启动流程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="FSM管理启动流程">FSM管理启动流程</h4>
+<p>FF中提供了FSM有限状态机工具，使用此工具我们可以将游戏按流程进行划分：</p>
+<p>例如下图：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021033963.png" alt="image-20260202103306356"></p>
+<p>在不同的流程中，我们可以对资源、游戏系统等进行控制，具体使用很自由。</p>
+<p>在项目中<code>FFW/Core/States/GameStartFsm.cs</code>提供了一个示例，可参考实现。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Cysharp.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> FFW.BaseSystems.ResKit;</span><br><span class="line"><span class="keyword">using</span> FFW.BaseSystems.SceneKit;</span><br><span class="line"><span class="keyword">using</span> FFW.BaseSystems.UiKit;</span><br><span class="line"><span class="keyword">using</span> FFW.Core.Models;</span><br><span class="line"><span class="keyword">using</span> FFW.Extension.FFSM;</span><br><span class="line"><span class="keyword">using</span> FFW.Template.HotKeyKit;</span><br><span class="line"><span class="keyword">using</span> FFW.Template.HotKeyKit.example;</span><br><span class="line"><span class="keyword">using</span> UniRx;</span><br><span class="line"><span class="keyword">using</span> Unity.Collections;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">FFW.Core.States</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 以FSM启动游戏 进行流程管理示例</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GameStartFsm</span> : <span class="title">GameStartAbs</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">protected</span> <span class="keyword">override</span> IResLoader ResLoader =&gt; <span class="keyword">new</span> AddressResLoader();</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> ISceneLoader SceneLoader =&gt; <span class="keyword">new</span> SceneLoaderDefault();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> FsmMachine&lt;GameBlackboard&gt; fsmMachine;</span><br><span class="line"></span><br><span class="line">        [<span class="meta">SerializeField, ReadOnly</span>] <span class="keyword">private</span> <span class="built_in">string</span> gameState = <span class="string">&quot;菜单状态&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.RegisterSystem(<span class="keyword">new</span> HotKeySystem());</span><br><span class="line"></span><br><span class="line">            fsmMachine = <span class="keyword">new</span> FsmMachine&lt;GameBlackboard&gt;(Blackboard);</span><br><span class="line">            fsmMachine.AddState(<span class="keyword">new</span> MenuGameState(<span class="string">&quot;菜单状态&quot;</span>, fsmMachine));</span><br><span class="line">            fsmMachine.AddState(<span class="keyword">new</span> PlayGameState(<span class="string">&quot;游戏状态&quot;</span>, fsmMachine));</span><br><span class="line"></span><br><span class="line">            fsmMachine.ChangeState(<span class="string">&quot;菜单状态&quot;</span>);</span><br><span class="line"></span><br><span class="line">            fsmMachine.OnStateChangeAction += x =&gt; &#123; gameState = x.StateName; &#125;;</span><br><span class="line"></span><br><span class="line">            Observable.EveryUpdate().Where(x =&gt; Input.GetKeyDown(KeyCode.Space)).Subscribe(x =&gt;</span><br><span class="line">            &#123;</span><br><span class="line">                fsmMachine.ChangeState(<span class="string">&quot;游戏状态&quot;</span>);</span><br><span class="line">            &#125;).AddTo(<span class="keyword">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MenuGameState</span> : <span class="title">FsmReturnStateAbs</span>&lt;<span class="title">GameBlackboard</span>&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> UIPanelBase hotkeyPanel;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MenuGameState</span>(<span class="params"><span class="built_in">string</span> stateName, FsmMachine&lt;GameBlackboard&gt; fsmMachine</span>) : <span class="title">base</span>(<span class="params">stateName, fsmMachine</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Exit</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            hotkeyPanel?.Pop();</span><br><span class="line">            <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Update</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">async</span> UniTask&lt;<span class="built_in">bool</span>&gt; <span class="title">Execute</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            hotkeyPanel = <span class="keyword">await</span> GameCore.GetSystem&lt;UISystem&gt;().PushPanel&lt;HotKeySettingPanel&gt;();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">PlayGameState</span> : <span class="title">FsmReturnStateAbs</span>&lt;<span class="title">GameBlackboard</span>&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">PlayGameState</span>(<span class="params"><span class="built_in">string</span> stateName, FsmMachine&lt;GameBlackboard&gt; fsmMachine</span>) : <span class="title">base</span>(<span class="params">stateName, fsmMachine</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Exit</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            GameCore.GetSystem&lt;UISystem&gt;().PopWindowManager.CloseAllPopWindows();</span><br><span class="line">            <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Update</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">async</span> UniTask&lt;<span class="built_in">bool</span>&gt; <span class="title">Execute</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-4-版本号管理和UI创建器">3.4 版本号管理和UI创建器</h3>
+<p>快捷键按下 Ctrl+L 可以打开管理器，如下图：</p>
+<ol>
+<li>点击创建项目资源结构文件夹</li>
+<li>点击选择路径选择AARes</li>
+<li>点击刷新addressable 可以自动扫描文件将其加入aa分组管理。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021125590.png" alt="image-20260202112551301"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021402142.png" alt="image-20260202140200183"></p>
+<p>版本号：用于区分引用版本，默认显示在右下角。</p>
+<p>UI模板：可以通过这个创建UI，默认面板以Panel结尾；弹窗以PopWindow结尾。</p>
+<h2 id="4-IOC容器">4.IOC容器</h2>
+<p>FFW框架，使用类似IOC容器的概念管理 带状态的数据对象：</p>
+<p>可进入 GameCore.cs 查看源码</p>
+<ul>
+<li>Model 带状态的游戏数据实体对象</li>
+<li>System 带状态的游戏</li>
+</ul>
+<p>在任何地方均可使用：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.RegisterSystem(T t); <span class="comment">//来注册一个系统</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;T&gt;(); <span class="comment">//获取系统</span></span><br><span class="line"><span class="keyword">this</span>.RegisterModel(T t);<span class="comment">//注册一个数据模型</span></span><br><span class="line"><span class="keyword">this</span>.GetModel&lt;T&gt;(); <span class="comment">//获取数据模型</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-基础系统">5.基础系统</h2>
+<h3 id="5-1-资源加载">5.1 资源加载</h3>
+<p>继承自<code>IResLoader</code>,在启动器中使用接口实现。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> go= <span class="keyword">await</span> <span class="keyword">this</span>.GetSystem&lt;IResLoader&gt;().Instantiate&lt;GameObject&gt;(<span class="string">&quot;aa&quot;</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="keyword">this</span>.GetSystem&lt;IResLoader&gt;().LoadAsync&lt;Texture&gt;(<span class="string">&quot;bb&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-场景加载">5.2 场景加载</h3>
+<p>继承自<code>ISceneLoader</code>,在启动器中使用接口实现。LoadSceneMode 自由选择。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> handle= <span class="keyword">this</span>.GetSystem&lt;ISceneLoader&gt;().LoadSceneAsync(<span class="string">&quot;sc&quot;</span>, LoadSceneMode.Additive);</span><br><span class="line">        handle.completed += x =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">&quot;加载完成&quot;</span>);</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">while</span> (!handle.isDone)</span><br><span class="line">        &#123;</span><br><span class="line">            Debug.Log(<span class="string">$&quot;加载进度: <span class="subst">&#123;handle.progress&#125;</span>&quot;</span>);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-3-事件总线">5.3 事件总线</h3>
+<p>支持事件注册、派发、注销、状态管理等。同时为了维护事件系统的无序性，支持根据优先级进行事件执行。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册监听</span></span><br><span class="line"><span class="keyword">var</span> unHandle = <span class="keyword">this</span>.RegisterEvent&lt;GameStartEvent&gt;(x =&gt; &#123; Debug.Log(x.PlayerName + <span class="string">&quot;游戏启动事件 高优先级&quot;</span>); &#125;, <span class="number">100</span>);</span><br><span class="line"><span class="keyword">var</span> unHandle2 = <span class="keyword">this</span>.RegisterEvent&lt;GameStartEvent&gt;(x =&gt; &#123; Debug.Log(x.PlayerName + <span class="string">&quot;游戏启动事件 默认优先级&quot;</span>); &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//发送事件</span></span><br><span class="line"><span class="keyword">this</span>.SendEvent(<span class="keyword">new</span> GameStartEvent() &#123; PlayerName = <span class="string">&quot;AA&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//移除监听</span></span><br><span class="line">unHandle?.Unregister();</span><br><span class="line">unHandle2?.Unregister();</span><br><span class="line"></span><br><span class="line"><span class="comment">//查看事件中心状态</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;EventCenter&gt;().GetAllEventsInfo();</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021432670.png" alt="image-20260202143240935"></p>
+<h3 id="5-4-音效管理">5.4 音效管理</h3>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//播放音效</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().PlayBgmAsync(<span class="string">&quot;aa&quot;</span>);</span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().PlayAudioAsync(<span class="string">&quot;bb&quot;</span>);</span><br><span class="line"><span class="comment">//静音</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.bgmMute.Value = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.audioMute.Value = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.totalMute.Value = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置音量</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.bgmVolume.Value = <span class="number">0.5f</span>;</span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.audioVolume.Value = <span class="number">0.5f</span>;</span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.totalVolume.Value = <span class="number">0.5f</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取音量</span></span><br><span class="line">Debug.Log(<span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.BgmVolume);</span><br><span class="line">Debug.Log(<span class="keyword">this</span>.GetSystem&lt;MusicSystem&gt;().ConfigAsset.AudioVolume);</span><br></pre></td></tr></table></figure>
+<h3 id="5-5-UI管理">5.5 UI管理</h3>
+<p>UI系统使用栈对UI面板进行管理，将UI划分为：bot、mid、top、popWindow、system 五层。</p>
+<h4 id="5-5-1UIPanel的创建和使用">5.5.1UIPanel的创建和使用</h4>
+<p>可以使用Packer创建UIPanel，创建后的位置在<code>AARes/UI/Panels/</code>下</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021444212.png" alt="image-20260202144455673"></p>
+<p>创建后在目录下Scripts下创建一个C#脚本，挂载在预制体上。点击Packer的刷新Addressable 按钮，会自动将其加入aa管理。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> FFW.BaseSystems.UiKit;</span><br><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AAPanel</span> : <span class="title">UIPanelBase</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInitReady</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnInitReady();</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPanel初始化完成&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnEnter</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnEnter();</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPanel显示&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnExit</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnExit();</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPanel退出&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">UpdateUI</span>(<span class="params"><span class="built_in">object</span> data = <span class="literal">null</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.UpdateUI(data);</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPanel更新&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602021450439.png" alt="image-20260202145053046"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示UIpanel</span></span><br><span class="line"><span class="keyword">var</span> panel= <span class="keyword">await</span> <span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().PushPanel&lt;AAPanel&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">//更新UI</span></span><br><span class="line">panel.UpdateUI(<span class="keyword">new</span> &#123; PlayerName = <span class="string">&quot;AA&quot;</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭UIpanel</span></span><br><span class="line">panel.Pop(); <span class="comment">//方法1</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().PopPanel&lt;AAPanel&gt;(); <span class="comment">//方法2</span></span><br></pre></td></tr></table></figure>
+<h4 id="5-5-2UIView">5.5.2UIView</h4>
+<p>UIView是UI的最小单位，包含一个UI组件，一个UIPanel下可以有多个UIView。用法基本同UiPanel，继承自：UIViewBase.</p>
+<p>在Panel初始化时，View会自动初始化，在Panel OnXXX 事件时，View也会同步执行。</p>
+<h4 id="5-5-3UIPopWindow的创建和使用">5.5.3UIPopWindow的创建和使用</h4>
+<p>所有在游戏中需要以弹窗展示的UI内容都可以使用此系统进行处理。</p>
+<p>创建同UIPanel，直接在Packer中创建即可，继承自<code>PopWindowAbs</code></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AAPopWindow</span> : <span class="title">PopWindowAbs</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnInit</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnInit();</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPopWindow初始化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnEnter</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnEnter();</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPopWindow显示&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnExit</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.OnExit();</span><br><span class="line">        Debug.Log(<span class="string">&quot;AAPopWindow退出&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示PopWindow</span></span><br><span class="line"><span class="keyword">var</span> popWindow = <span class="keyword">await</span> <span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().PopWindowManager.PushPopWindow&lt;AAPopWindow&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭PopWindow</span></span><br><span class="line">popWindow.OnExit();</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭所有PopWindow</span></span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().PopWindowManager.CloseAllPopWindows();</span><br></pre></td></tr></table></figure>
+<h4 id="5-5-4确认框Confim">5.5.4确认框Confim</h4>
+<p>创建一个名位<strong>ConfirmationPopWindow</strong>的弹窗，该弹窗至少包含如下元素</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602022139013.png" alt="确认框预制件"></p>
+<p>挂载<em>ConfirmationPopWindow</em>脚本，并将mask设置上。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602022150463.png" alt="设置拖拽"></p>
+<p>注意：对于确认框来说，我们希望在弹出时遮挡其下的UI操作 ，所以我们设置父布局占满canvas；设置完成后，如果你不希望遮挡，就不需要mask。</p>
+<ul>
+<li>完成Prefab后第一次需要点击Packer的刷新aa将其加入到aa包中。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().PopWindowManager.ShowConfirmWindow&lt;ConfirmationPopWindow&gt;(<span class="string">&quot;tips&quot;</span>, <span class="string">&quot;Are you sure you want to close it?&quot;</span>, () =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    Debug.Log(<span class="string">&quot;确定&quot;</span>);</span><br><span class="line">&#125;, () =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    Debug.Log(<span class="string">&quot;取消&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602022152092.gif" alt="弹窗效果"></p>
+<h4 id="5-5-5提示Tip">5.5.5提示Tip</h4>
+<p>创建预制体、添加CenterTip脚本，并给变量赋值；将其加入aa包中。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602022201556.png" alt="创建预制体"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//载入预制体，初始化</span></span><br><span class="line"><span class="keyword">var</span> centTip =  <span class="keyword">await</span> <span class="keyword">this</span>.ResLoader.Instantiate&lt;CenterTip&gt;(<span class="string">&quot;CenterTip&quot;</span>);</span><br><span class="line"><span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().InitTip(centTip,<span class="keyword">new</span> Vector2(<span class="number">0</span>,<span class="number">300f</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (Input.GetKeyDown(KeyCode.K))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//显示提示</span></span><br><span class="line">    <span class="keyword">this</span>.GetSystem&lt;UISystem&gt;().ShowTip(<span class="string">&quot;data:&quot;</span>+ Random.Range(<span class="number">0</span>, <span class="number">1000</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602022205240.gif" alt="提示效果"></p>
+<h2 id="6-扩展功能">6.扩展功能</h2>
+<h3 id="6-1-Csv读取">6.1 Csv读取</h3>
+<p>创建如下实体类，为方便管理可继承自CsvModel，CsvModel默认提供了Id字段。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">System.Serializable</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">WeaponData</span>: <span class="title">CsvModel</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">CSVColumn(<span class="string">&quot;武器名称&quot;</span>)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> weaponName;</span><br><span class="line">    [<span class="meta">CSVColumn(<span class="string">&quot;武器等级&quot;</span>)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> weaponLevel;</span><br><span class="line">    [<span class="meta">CSVColumn(<span class="string">&quot;武器攻击力&quot;</span>)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> weaponAttack;</span><br><span class="line">    [<span class="meta">CSVColumn(<span class="string">&quot;武器防御力&quot;</span>)</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> weaponDefense;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">string</span> <span class="title">ToString</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">$&quot;<span class="subst">&#123;weaponName&#125;</span>| 武器等级: <span class="subst">&#123;weaponLevel&#125;</span>, 武器攻击力: <span class="subst">&#123;weaponAttack&#125;</span>, 武器防御力: <span class="subst">&#123;weaponDefense&#125;</span>&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>武器名称</th>
+<th>武器等级</th>
+<th>武器攻击力</th>
+<th>武器防御力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>weaponName</td>
+<td>weaponLevel</td>
+<td>weaponAttack</td>
+<td>weaponDefense</td>
+</tr>
+<tr>
+<td>int</td>
+<td>string</td>
+<td>int</td>
+<td>int</td>
+<td>int</td>
+</tr>
+<tr>
+<td>1</td>
+<td>小刀</td>
+<td>1</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>双节棍</td>
+<td>2</td>
+<td>12</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>银月斧</td>
+<td>3</td>
+<td>25</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：Csv文件需要以*,*分隔，以UTF-8为编码。</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读取CSV</span></span><br><span class="line"><span class="keyword">var</span> csvData =</span><br><span class="line">    <span class="keyword">await</span> CSVParser.ParseByPathAsync&lt;WeaponData&gt;(Path.Combine(Application.streamingAssetsPath, <span class="string">&quot;weapon.csv&quot;</span>));</span><br><span class="line"></span><br><span class="line">csvData.ForEach(Debug.Log);</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602030928766.png" alt="CSV导入读取效果"></p>
+<p>使用CSVParser即可将Csv直接解析为对象集，CSVParser提供多种方法可尝试。</p>
+<h3 id="6-2-CSV转SO">6.2 CSV转SO</h3>
+<p>FF框架提供了将Csv转换为So的功能，可方便的将Csv数据转换到So。</p>
+<p>Q：为什么要将Csv转换到So？</p>
+<p>A：比如Csv中包含一些二进制资源（图片地址、预制体地址、音效地址等），在Csv中无法预览，容易配错。</p>
+<table>
+<thead>
+<tr>
+<th>特性对比</th>
+<th>CSV文件</th>
+<th>ScriptableObject (SO)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据形态</td>
+<td>外部文本，存储为<code>TextAsset</code></td>
+<td>Unity资源文件 (<code>.asset</code>)</td>
+</tr>
+<tr>
+<td>运行时性能</td>
+<td>需实时解析，效率较低</td>
+<td><strong>直接引用</strong>，无需解析，性能高</td>
+</tr>
+<tr>
+<td>内存占用</td>
+<td>字符串形式加载，解析后产生额外GC（垃圾回收）</td>
+<td>序列化对象，内存效率更优</td>
+</tr>
+<tr>
+<td>类型安全</td>
+<td>所有字段初始为字符串，需手动转换类型，易出错</td>
+<td><strong>强类型</strong>，字段在Inspector中清晰可见，不易出错</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>当然选择什么样的存储形式，完全取决于您，FF仅提供支持。</p>
+</blockquote>
+<p>要将Csv转换为So，首先需要将文件从StreamingAssets文件夹移出，选中csv文件右键：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602030942306.png" alt="image-20260203094231320"></p>
+<h3 id="6-3-FSM状态机">6.3 FSM状态机</h3>
+<p>创建状态类</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IdleState</span> : <span class="title">FsmStateAbs</span>&lt;<span class="title">GameBlackboard</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">IdleState</span>(<span class="params"><span class="built_in">string</span> stateName, FsmMachine&lt;GameBlackboard&gt; fsmMachine</span>) : <span class="title">base</span>(<span class="params">stateName, fsmMachine</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Enter</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;进入IdleState&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Exit</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;退出IdleState&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;IdleState Update&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AttackState</span>: <span class="title">FsmStateAbs</span>&lt;<span class="title">GameBlackboard</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AttackState</span>(<span class="params"><span class="built_in">string</span> stateName, FsmMachine&lt;GameBlackboard&gt; fsmMachine</span>) : <span class="title">base</span>(<span class="params">stateName, fsmMachine</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Enter</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        Debug.Log(<span class="string">&quot;进入AttackState&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Exit</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        Debug.Log(<span class="string">&quot;退出AttackState&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> UniTask <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(<span class="string">&quot;AttackState Update&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> UniTask.CompletedTask;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>设置并启动状态机:</p>
+<blockquote>
+<p>提供一个上下文Context 作为状态机的公用数据黑板，可以是任意类型，这里使用都是全局黑板。</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建状态机</span></span><br><span class="line"><span class="keyword">var</span> fsm = <span class="keyword">new</span> FsmMachine&lt;GameBlackboard&gt;(Blackboard);</span><br><span class="line"><span class="keyword">var</span> idleState=<span class="keyword">new</span> IdleState(<span class="string">&quot;Idle&quot;</span>,fsm);</span><br><span class="line"><span class="keyword">var</span> attackState=<span class="keyword">new</span> AttackState(<span class="string">&quot;Attack&quot;</span>,fsm);</span><br><span class="line"><span class="comment">//注册状态</span></span><br><span class="line"></span><br><span class="line">fsm.AddState(idleState).AddState(attackState);</span><br><span class="line"></span><br><span class="line"><span class="comment">//注册 转换 (任意状态只要条件满足都会转换到目标状态 attackState )</span></span><br><span class="line">fsm.AddTransition(<span class="keyword">new</span> FsmTransition&lt;GameBlackboard&gt;(() =&gt; Input.GetKeyDown(KeyCode.P), attackState));</span><br><span class="line"></span><br><span class="line"><span class="comment">//注册 转换（按下o且 当前状态是idle 才能转换到 attack）</span></span><br><span class="line">fsm.AddTransition(<span class="keyword">new</span> FsmTransition&lt;GameBlackboard&gt;(() =&gt; Input.GetKeyDown(KeyCode.O), idleState, attackState));</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment">//注册刷新</span></span><br><span class="line">Observable.EveryUpdate().Subscribe(_ =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    fsm.Update();</span><br><span class="line">&#125;).AddTo(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//改变状态</span></span><br><span class="line"><span class="keyword">await</span> fsm.ChangeState(<span class="keyword">new</span> IdleState(<span class="string">&quot;Idle&quot;</span>, fsm));</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>转换 是可选的，如果不使用转换可以使用ChangeState强制转换状态；如果注册了转换会自动转换</p>
+</blockquote>
+<h3 id="6-4-对象池">6.4 对象池</h3>
+<p>FF框架提供2种对象池：通用对象对象池和游戏对象池。</p>
+<ul>
+<li>ObjectPool<T> where T : new()</li>
+<li>GameObjectPool<T> where T : MonoBehaviour</li>
+</ul>
+<h3 id="6-5-单例">6.5 单例</h3>
+<p>默认FF只提供<code>SingletonConfigScriptObject&lt;T&gt;</code> 单例类型，用于So 单例。</p>
+<p>对于其他的单例，框架建议使用IOC容器进行管理实现全局调用。</p>
+<h3 id="6-6-So背包">6.6 So背包</h3>
+<p>So背包是对Unity ScripttableObject 的数据存储集资源。</p>
+<p>可直接继承自 <code>BaseAssetBag&lt;T&gt;</code>使用。</p>
+<p>提供方法：</p>
+<ul>
+<li>Save</li>
+<li>Load</li>
+<li>Clean</li>
+</ul>
+<blockquote>
+<p>So背包的设计用意是 方便存储和读取so数据，将相同的so资源数据用Bag存储调用。</p>
+<p>例如：背包和背包道具、成就数据等</p>
+</blockquote>
+<h2 id="7-常用工具">7.常用工具</h2>
+<h3 id="7-1-全局黑板">7.1 全局黑板</h3>
+<p>FF默认提供了一个全局游戏黑板，方便进行全局的数据暂存取用。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获得全局游戏黑板</span></span><br><span class="line"><span class="keyword">var</span> blackboard = <span class="keyword">this</span>.GetModel&lt;GameBlackboard&gt;();</span><br><span class="line">blackboard.SetData(<span class="string">&quot;level&quot;</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> level = blackboard.GetData&lt;<span class="built_in">int</span>&gt;(<span class="string">&quot;level&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>同时也可以创建自己的数据黑板，继承自 <code>BlackboardAbs</code>即可。</p>
+<h3 id="7-2-常用颜色">7.2 常用颜色</h3>
+<p>访问 FastyColor 静态类进行使用</p>
+<h3 id="7-3-其他工具">7.3 其他工具</h3>
+<ul>
+<li>Dict 自定义字典 在属性面板序列化</li>
+<li>FastyTool 一些常用工具</li>
+<li>RichTextTool 文字着色</li>
+<li>SkipUnityLogo 跳过Logo</li>
+<li>TaskQueue 任务队列</li>
+<li>MyLog 日志扩展</li>
+</ul>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/ico_A.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/ico_A.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">fasty</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/')">FinalFrameWork使用手册</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=FinalFrameWork使用手册&amp;url=https://www.fasty97.top/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/&amp;pic=http://pic.fasty97.top/fasty26/202602082038998.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.fasty97.top" target="_blank">指尖小屋</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/FinalFramerWork/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>FinalFramerWork<span class="tagsPageCount">3</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="http://pic.fasty97.top/fasty26/202602082038998.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2026/01/17/%E5%BC%B9%E5%87%BA%E5%B1%82%E5%AD%90%E7%B3%BB%E7%BB%9F/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/%E5%A3%81%E7%BA%B8/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%8A%A8%E6%BC%AB-%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8.png@sm?_r_=17cd06db-0240-6462-b695-915b4f0852fb" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">弹出层子系统</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2026/01/08/unity%E6%94%B9%E9%94%AE%E7%B3%BB%E7%BB%9F_%E4%BC%A0%E7%BB%9F%E7%89%88/" title="unity改键系统_传统版"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/%E5%A3%81%E7%BA%B8/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E4%BA%8C%E6%AC%A1%E5%85%83-%E9%A3%8E%E6%99%AF.png@sm?_r_=7ad2cb90-6e11-ff40-83e3-ca76fdf6cf4d" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-08</div><div class="title">unity改键系统_传统版</div></div></a></div><div><a href="/2026/01/17/%E5%BC%B9%E5%87%BA%E5%B1%82%E5%AD%90%E7%B3%BB%E7%BB%9F/" title="弹出层子系统"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/%E5%A3%81%E7%BA%B8/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%8A%A8%E6%BC%AB-%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8.png@sm?_r_=17cd06db-0240-6462-b695-915b4f0852fb" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-01-17</div><div class="title">弹出层子系统</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/ico_A.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">书写梦想</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">1.快速安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%80%9A%E8%BF%87-Unity-PackageManager%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 通过 Unity PackageManager（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%9B%B4%E6%8E%A5%E5%89%8D%E5%BE%80-gitee-%E4%B8%8B%E8%BD%BD-%EF%BC%88%E5%AF%B9%E4%BA%8E%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E6%BA%90%E7%A0%81%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 直接前往 gitee 下载 （对于需要修改源码）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96"><span class="toc-number">2.</span> <span class="toc-text">2.项目依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6"><span class="toc-number">3.</span> <span class="toc-text">3.启动框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-AA%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 AA设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%90%AF%E5%8A%A8%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 启动器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%89%A9%E5%B1%95%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 扩展启动流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#FSM%E7%AE%A1%E7%90%86%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B"><span class="toc-number">3.3.1.</span> <span class="toc-text">FSM管理启动流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E7%89%88%E6%9C%AC%E5%8F%B7%E7%AE%A1%E7%90%86%E5%92%8CUI%E5%88%9B%E5%BB%BA%E5%99%A8"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 版本号管理和UI创建器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-IOC%E5%AE%B9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">4.IOC容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%9F%BA%E7%A1%80%E7%B3%BB%E7%BB%9F"><span class="toc-number">5.</span> <span class="toc-text">5.基础系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E8%B5%84%E6%BA%90%E5%8A%A0%E8%BD%BD"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 资源加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%9C%BA%E6%99%AF%E5%8A%A0%E8%BD%BD"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 场景加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BF"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 事件总线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E9%9F%B3%E6%95%88%E7%AE%A1%E7%90%86"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 音效管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-UI%E7%AE%A1%E7%90%86"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 UI管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-1UIPanel%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">5.5.1.</span> <span class="toc-text">5.5.1UIPanel的创建和使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-2UIView"><span class="toc-number">5.5.2.</span> <span class="toc-text">5.5.2UIView</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-3UIPopWindow%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">5.5.3.</span> <span class="toc-text">5.5.3UIPopWindow的创建和使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-4%E7%A1%AE%E8%AE%A4%E6%A1%86Confim"><span class="toc-number">5.5.4.</span> <span class="toc-text">5.5.4确认框Confim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-5-5%E6%8F%90%E7%A4%BATip"><span class="toc-number">5.5.5.</span> <span class="toc-text">5.5.5提示Tip</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD"><span class="toc-number">6.</span> <span class="toc-text">6.扩展功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-Csv%E8%AF%BB%E5%8F%96"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Csv读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-CSV%E8%BD%ACSO"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 CSV转SO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-FSM%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 FSM状态机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E5%AF%B9%E8%B1%A1%E6%B1%A0"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 对象池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E5%8D%95%E4%BE%8B"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 单例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-So%E8%83%8C%E5%8C%85"><span class="toc-number">6.6.</span> <span class="toc-text">6.6 So背包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">7.</span> <span class="toc-text">7.常用工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E5%85%A8%E5%B1%80%E9%BB%91%E6%9D%BF"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 全局黑板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%B8%B8%E7%94%A8%E9%A2%9C%E8%89%B2"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 常用颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 其他工具</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" title="FinalFrameWork使用手册"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/202602082038998.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FinalFrameWork使用手册"/></a><div class="content"><a class="title" href="/2026/02/02/FinalFrameWork%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" title="FinalFrameWork使用手册">FinalFrameWork使用手册</a><time datetime="2026-02-02T12:23:31.694Z" title="发表于 2026-02-02 20:23:31">2026-02-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/17/%E5%BC%B9%E5%87%BA%E5%B1%82%E5%AD%90%E7%B3%BB%E7%BB%9F/" title="弹出层子系统"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/%E5%A3%81%E7%BA%B8/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E5%8A%A8%E6%BC%AB-%E5%8A%A8%E6%BC%AB%E5%A3%81%E7%BA%B8.png@sm?_r_=17cd06db-0240-6462-b695-915b4f0852fb" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="弹出层子系统"/></a><div class="content"><a class="title" href="/2026/01/17/%E5%BC%B9%E5%87%BA%E5%B1%82%E5%AD%90%E7%B3%BB%E7%BB%9F/" title="弹出层子系统">弹出层子系统</a><time datetime="2026-01-17T12:28:41.975Z" title="发表于 2026-01-17 20:28:41">2026-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/08/unity%E6%94%B9%E9%94%AE%E7%B3%BB%E7%BB%9F_%E4%BC%A0%E7%BB%9F%E7%89%88/" title="unity改键系统_传统版"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/%E5%A3%81%E7%BA%B8/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91%E4%BA%8C%E6%AC%A1%E5%85%83-%E9%A3%8E%E6%99%AF.png@sm?_r_=7ad2cb90-6e11-ff40-83e3-ca76fdf6cf4d" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="unity改键系统_传统版"/></a><div class="content"><a class="title" href="/2026/01/08/unity%E6%94%B9%E9%94%AE%E7%B3%BB%E7%BB%9F_%E4%BC%A0%E7%BB%9F%E7%89%88/" title="unity改键系统_传统版">unity改键系统_传统版</a><time datetime="2026-01-08T11:59:35.491Z" title="发表于 2026-01-08 19:59:35">2026-01-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/12/2025%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="2025年终总结"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/NotePad/110625684_p0.jpg@sm?_r_=ed3f96e7-0f43-e230-3b75-ce674017c0b4" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年终总结"/></a><div class="content"><a class="title" href="/2025/12/12/2025%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="2025年终总结">2025年终总结</a><time datetime="2025-12-12T06:31:09.000Z" title="发表于 2025-12-12 14:31:09">2025-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/03/NodeCanvas%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%91/" title="NodeCanvas自定义图树"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="http://pic.fasty97.top/fasty26/%E5%A3%81%E7%BA%B8/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91AI-AI%E9%A3%8E%E6%99%AF.png@sm?_r_=3f18620b-2497-0ff8-7ff1-b8de86998b58" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="NodeCanvas自定义图树"/></a><div class="content"><a class="title" href="/2024/04/03/NodeCanvas%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E6%A0%91/" title="NodeCanvas自定义图树">NodeCanvas自定义图树</a><time datetime="2024-04-03T01:21:52.000Z" title="发表于 2024-04-03 09:21:52">2024-04-03</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="文档" href="/docs/">文档</a><a class="footer-item" title="源码" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a><a class="footer-item" title="更新日志" href="/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://hexo.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2019 - 2026 By <a class="footer-bar-link" href="/" title="fasty" target="_blank">fasty</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">111</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">86</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">51</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://hexo.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/project/"><i class="far fa-code faa-tada"></i><span> 项目</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/timeLine/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 博客里程</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/2D/" style="font-size: 0.88rem;">2D<sup>1</sup></a><a href="/tags/Async/" style="font-size: 0.88rem;">Async<sup>1</sup></a><a href="/tags/Cinemachine/" style="font-size: 0.88rem;">Cinemachine<sup>1</sup></a><a href="/tags/FSM/" style="font-size: 0.88rem;">FSM<sup>1</sup></a><a href="/tags/FinalFramerWork/" style="font-size: 0.88rem;">FinalFramerWork<sup>3</sup></a><a href="/tags/Lua/" style="font-size: 0.88rem;">Lua<sup>9</sup></a><a href="/tags/MMD/" style="font-size: 0.88rem;">MMD<sup>1</sup></a><a href="/tags/PMX/" style="font-size: 0.88rem;">PMX<sup>1</sup></a><a href="/tags/Shader/" style="font-size: 0.88rem;">Shader<sup>10</sup></a><a href="/tags/Spine/" style="font-size: 0.88rem;">Spine<sup>1</sup></a><a href="/tags/TimeLine/" style="font-size: 0.88rem;">TimeLine<sup>1</sup></a><a href="/tags/Unity-Tool/" style="font-size: 0.88rem;">Unity Tool<sup>4</sup></a><a href="/tags/VR-AR-MR/" style="font-size: 0.88rem;">VR/AR/MR<sup>1</sup></a><a href="/tags/XML/" style="font-size: 0.88rem;">XML<sup>1</sup></a><a href="/tags/shaderGraph/" style="font-size: 0.88rem;">shaderGraph<sup>1</sup></a><a href="/tags/ui/" style="font-size: 0.88rem;">ui<sup>3</sup></a><a href="/tags/unity/" style="font-size: 0.88rem;">unity<sup>12</sup></a><a href="/tags/%E5%89%A7%E6%83%85%E7%BC%96%E6%8E%92/" style="font-size: 0.88rem;">剧情编排<sup>1</sup></a><a href="/tags/%E5%8D%8F%E7%A8%8B/" style="font-size: 0.88rem;">协程<sup>2</sup></a><a href="/tags/%E5%8F%AF%E7%BC%96%E7%A8%8B%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF%EF%BC%88SRP%EF%BC%89/" style="font-size: 0.88rem;">可编程渲染管线（SRP）<sup>1</sup></a><a href="/tags/%E5%90%8E%E5%A4%84%E7%90%86/" style="font-size: 0.88rem;">后处理<sup>1</sup></a><a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">响应式编程<sup>1</sup></a><a href="/tags/%E5%A4%9A%E4%BA%BA/" style="font-size: 0.88rem;">多人<sup>1</sup></a><a href="/tags/%E5%A5%BD%E7%89%A9%E6%8E%A8%E8%8D%90/" style="font-size: 0.88rem;">好物推荐<sup>4</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">年终总结<sup>5</sup></a><a href="/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 0.88rem;">异步<sup>1</sup></a><a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 0.88rem;">总结<sup>1</sup></a><a href="/tags/%E6%89%8B%E6%9F%84/" style="font-size: 0.88rem;">手柄<sup>1</sup></a><a href="/tags/%E6%96%B0%E6%8A%80%E6%9C%AF%E4%BD%93%E9%AA%8C/" style="font-size: 0.88rem;">新技术体验<sup>1</sup></a><a href="/tags/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA/" style="font-size: 0.88rem;">有限状态机<sup>2</sup></a><a href="/tags/%E6%A8%A1%E5%9E%8B/" style="font-size: 0.88rem;">模型<sup>1</sup></a><a href="/tags/%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF/" style="font-size: 0.88rem;">渲染管线<sup>1</sup></a><a href="/tags/%E7%8A%B6%E6%80%81%E6%9C%BA/" style="font-size: 0.88rem;">状态机<sup>2</sup></a><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 0.88rem;">生活<sup>7</sup></a><a href="/tags/%E7%9B%AE%E6%A0%87/" style="font-size: 0.88rem;">目标<sup>1</sup></a><a href="/tags/%E8%A1%8C%E4%B8%BA%E6%A0%91/" style="font-size: 0.88rem;">行为树<sup>2</sup></a><a href="/tags/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" style="font-size: 0.88rem;">观察者模式<sup>1</sup></a><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem;">读书笔记<sup>14</sup></a><a href="/tags/%E8%BE%93%E5%85%A5%E7%B3%BB%E7%BB%9F/" style="font-size: 0.88rem;">输入系统<sup>2</sup></a><a href="/tags/%E9%93%BE%E5%BC%8F%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">链式编程<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><script src="https://cdn.cbd.int/colorthief@2.6.0/dist/color-thief.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://wline.fasty97.top',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+      imageUploader: true,
+    }, null))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    anzhiyu.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@3.8.0/dist/waline.css')
+      if (false) await getCSS('https://cdn.cbd.int/@waline/client@3.8.0/dist/waline-meta.css')
+      const { init } = await import('https://cdn.cbd.int/@waline/client@3.8.0/dist/waline.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://wline.fasty97.top/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="I,LOVE,YOU" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
